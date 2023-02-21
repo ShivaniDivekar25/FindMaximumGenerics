@@ -5,6 +5,7 @@ namespace FindMaximumTest
     public class FindMaxTest
     {
         FindMaximum findMaximum = new FindMaximum();
+        FindMaxGeneric<int> findMaxIntGeneric = new FindMaxGeneric<int>();
 
         [Test]      //TC-1.1
         public void GivenMaxFirstNum_WhenAnalysed_ShouldReturnFirstMax()
@@ -68,6 +69,27 @@ namespace FindMaximumTest
         {
             string result = findMaximum.FindMaxString("Apple", "Banana", "Pear"); 
             Assert.AreEqual("Pear", result);
+            Assert.Pass();
+        }
+        [Test]      //Generic TC-1
+        public void GivenMaxFirstNum_WhenAnalysed_ShouldReturnFirstMaxNum()
+        {
+            int result = findMaxIntGeneric.GenericMaxNumber(89, 45, 63);
+            Assert.AreEqual(89, result);
+            Assert.Pass();
+        }
+        [Test]
+        public void GivenMaxSecondNum_WhenAnalysed_ShouldReturnSecondMaxNum()
+        {
+            int result = findMaxIntGeneric.GenericMaxNumber(20, 45, 30);
+            Assert.AreEqual(45, result);
+            Assert.Pass();
+        }
+        [Test]
+        public void GivenMaxThirdNum_WhenAnalysed_ShouldReturnThirdMaxNum()
+        {
+            int result = findMaxIntGeneric.GenericMaxNumber(35, 45, 78);
+            Assert.AreEqual(78, result);
             Assert.Pass();
         }
     }

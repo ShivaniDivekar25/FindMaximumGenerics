@@ -2,7 +2,7 @@ using FindMaximumGeneric;
 
 namespace FindMaximumTest
 {
-    public class Tests
+    public class FindMaxTest
     {
         FindMaximum findMaximum = new FindMaximum();
 
@@ -11,6 +11,14 @@ namespace FindMaximumTest
         {
             int result = findMaximum.FindMaxInt(20, 17, 10);
             Assert.AreEqual(20, result);
+            Assert.Pass();
+        }
+
+        [Test]
+        public void GivenMaxSecondNum_WhenAnalysed_ShouldReturnSecondMax()
+        {
+            int result = findMaximum.FindMaxInt(20, 30, 10);
+            Assert.AreEqual(30, result);
             Assert.Pass();
         }
     }

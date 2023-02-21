@@ -52,14 +52,21 @@ namespace FindMaximumTest
         [Test]      //TC-3.1
         public void GivenMaxFirstString_WhenAnalysed_ShouldReturnFirstStringMax()
         {
-            string result = findMaximum.FindMaxString("Apple", "Banana", "Pear"); ;
+            string result = findMaximum.FindMaxString("Pear", "Banana", "Apple"); 
             Assert.AreEqual("Pear", result);
             Assert.Pass();
         }
         [Test]      //TC-3.2
         public void GivenMaxSecondString_WhenAnalysed_ShouldReturnSecondStringMax()
         {
-            string result = findMaximum.FindMaxString("Apple", "Pear", "Banana"); ;
+            string result = findMaximum.FindMaxString("Apple", "Pear", "Banana"); 
+            Assert.AreEqual("Pear", result);
+            Assert.Pass();
+        }
+        [Test]      //TC-3.3
+        public void GivenMaxThirdString_WhenAnalysed_ShouldReturnThirdStringMax()
+        {
+            string result = findMaximum.FindMaxString("Apple", "Banana", "Pear"); 
             Assert.AreEqual("Pear", result);
             Assert.Pass();
         }

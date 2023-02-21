@@ -8,19 +8,19 @@ namespace FindMaximumGeneric
 {
     public class FindMaximum
     {
-        public void FindMaxInt(int firstInt, int secondInt, int thirdInt)
+        public int FindMaxInt(int firstInt, int secondInt, int thirdInt)
         {
             if (firstInt.CompareTo(secondInt) > 0 && firstInt.CompareTo(thirdInt) > 0)
             {
-                Console.WriteLine("The {0} is greatest of all number", firstInt);
+                return firstInt;
             }
             else if (secondInt.CompareTo(thirdInt) > 0)
             {
-                Console.WriteLine("The {0} is greatest of all number", secondInt);
+                return secondInt;
             }
             else
             {
-                Console.WriteLine("The {0} is gretest of all number", thirdInt);
+                return thirdInt;
             }
         }
     }

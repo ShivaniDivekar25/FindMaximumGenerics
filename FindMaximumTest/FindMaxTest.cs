@@ -5,9 +5,9 @@ namespace FindMaximumTest
     public class FindMaxTest
     {
         FindMaximum findMaximum = new FindMaximum();
-        FindMaxGeneric<int> findMaxIntGeneric = new FindMaxGeneric<int>();
-        FindMaxGeneric<float> findMaxFloatGeneric = new FindMaxGeneric<float>();
-        FindMaxGeneric<string> findMaxStringGeneric = new FindMaxGeneric<string>();
+        FindMaxGeneric<int> findMaxIntGeneric = new FindMaxGeneric<int>(20,17,10);
+        FindMaxGeneric<float> findMaxFloatGeneric = new FindMaxGeneric<float>(36.21F, 12.36F, 25.45F);
+        FindMaxGeneric<string> findMaxStringGeneric = new FindMaxGeneric<string>("Pear", "Banana", "Apple");
 
         [Test]      //TC-1.1
         public void GivenMaxFirstNum_WhenAnalysed_ShouldReturnFirstMax()

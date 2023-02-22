@@ -6,12 +6,12 @@
         {
             Console.WriteLine("Welcome to find maximum using generics");
             Console.WriteLine("Please enter an option");
-            Console.WriteLine("1:Find maximum integer\n2:Find maximum float\n3:Find maximum string\n4:Find maximum using Generic");
+            Console.WriteLine("1:Find maximum integer\n2:Find maximum float\n3:Find maximum string\n4:Find maximum using Generic\n5:Refactor to find maximum using generic");
             int option = Convert.ToInt32(Console.ReadLine());
             FindMaximum findMaximum = new FindMaximum();
-            FindMaxGeneric<int> findMaxInt = new FindMaxGeneric<int>();
-            FindMaxGeneric<float> findMaxFloat = new FindMaxGeneric<float>();
-            FindMaxGeneric<string> findMaxString = new FindMaxGeneric<string>();
+            FindMaxGeneric<int> findMaxInt = new FindMaxGeneric<int>(12,25,30);
+            FindMaxGeneric<float> findMaxFloat = new FindMaxGeneric<float>(26.5f,30.56f,45.30f);
+            FindMaxGeneric<string> findMaxString = new FindMaxGeneric<string>("Apple","Pear","Banana");
             switch (option)
             {
                 case 1:
@@ -27,6 +27,11 @@
                     findMaxInt.GenericMaxNumber(12,25,30);
                     findMaxFloat.GenericMaxNumber(26.5f, 30.56f, 45.30f);
                     findMaxString.GenericMaxNumber("Apple", "Pear", "Banana");
+                    break;
+                case 5:
+                    findMaxInt.TestMaximum();
+                    findMaxFloat.TestMaximum();
+                    findMaxString.TestMaximum();
                     break;
                 default:
                     Console.WriteLine("Please enter right option");
